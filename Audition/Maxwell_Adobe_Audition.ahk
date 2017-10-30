@@ -83,7 +83,7 @@ return
 ; changed your color or brightness settings in Preferences > Appearance, this will likely NOT work for you.
 ;
 ; OK here's how it works: press AND HOLD the z key . While it's held down, your mouse will grab the time-selection nub.
-; while ` is down, you can press and hold left or right arrow keys to drag the time-election across the editor. It will start off
+; while z is down, you can press and hold left or right arrow keys to drag the time-selection across the editor. It will start off
 ; moving slowly, then eventually accelerate. If you want to scrub fast from the get-go, you can do so by using SHIFT left and SHIFT right
 ; while holding down the z key. 
 ;
@@ -149,7 +149,7 @@ z:: ; the z key -- change to another key if you want to use something else.
 	else
 	{
 		MouseGetPos, oldmouse_x, oldmouse_y ; store the current mouse position
-		MouseMove image_x+5, image_y+5 ; move mouse to time selection nub (5 px right and down from the top-left corner)
+		MouseMove image_x+5, image_y+5 ; move mouse to time-selection nub (5 px right and down from the top-left corner)
 		sleep 100 ; wait for UI to catch up
 		Send {Lbutton Down} ; hold down left mouse button
 		drag_mode := true ; enable drag mode-- this makes left and right keys move the mouse instead of their natural function
